@@ -1,3 +1,4 @@
+#головний маршрутизатор, що перекидає клієнта на певний application
 """learnsite URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -14,8 +15,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls), 
+    path('blog/', include('blog.urls'))
 ]
+
+#'admin/', - шаблон відносного url,  
+#admin.site.urls - функція, що запускається при переході клієнтом на цю сторінку
