@@ -2,7 +2,7 @@ from django.urls import path, include, re_path
 from . import views
 
 urlpatterns = [
-    re_path(r'([0-9]{4})', views.blog_main), 
+    re_path(r'', views.blog_main), #це все відповідає шляху domen.com/blog/ (в r'' - порожньо)
 ]
 #r - вказує, що стрічка є регулярним виразом
 #re_path - шлях теж стає регулярним
