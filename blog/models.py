@@ -10,5 +10,6 @@ class Post(models.Model):
     title = models.CharField(max_length=100) #CharField - тип для короткого тексту
     text = models.TextField() #для зберігання тексту
     created_at = models.DateField(default=timezone.now) #час коли таблиця створена
+    post_slug = models.CharField(max_length=80, default="default_post") #коротка назва поста для url
     def __str__(self): #при викликанні print буде повертатися саме заголовок(title)
         return self.title
